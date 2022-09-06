@@ -1,0 +1,3 @@
+In this new file, I changed the format of initial command line to start the program.
+
+And then, I fixed codes of "reg" part in client class, corresponding with the above change.  

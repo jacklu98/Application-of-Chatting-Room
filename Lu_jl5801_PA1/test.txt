@@ -1,0 +1,84 @@
+Test-case 1:
+x (Client1) display:
+>>> [Welcome, you are registered.]
+>>> [Client table updated. ]
+>>> [Client table updated. ]
+>>> [Client table updated. ]
+>>> [Message received by client2 ]
+>>> client3: Hi, this is client3.
+>>> [You are Offline. Bye.]
+>>> You have messages
+>>> client2:  <2022-03-24 19:31:32> hi
+
+>>> client3:  <2022-03-24 19:31:43> hello!!
+
+>>> [Client table updated. ]
+>>> [You are Offline. Bye.]
+
+
+y (client2) display:
+>>> [Welcome, you are registered.]
+>>> [Client table updated. ]
+>>> [Client table updated. ]
+>>> client1: Hi, this is client1.
+>>> [Message received by client3 ]
+>>> [Client table updated. ]
+>>> [No ACK from client1, message sent to server]
+>>> [Messages received by the server and saved]
+>>> [Client table updated. ]
+>>> [You are Offline. Bye.]
+
+
+z (client3) display:
+>>> [Welcome, you are registered.]
+>>> [Client table updated. ]
+>>> client2: HI, this is client2.
+>>> [Message received by client1 ]
+>>> [Client table updated. ]
+>>> [No ACK from client1, message sent to server]
+>>> [Messages received by the server and saved]
+>>> [Client table updated. ]
+>>> [You are Offline. Bye.]
+
+
+
+Test-case 2:
+x (Client1) display:
+>>> [Welcome, you are registered.]
+>>> [Client table updated. ]
+>>> [Client table updated. ]
+>>> [Client table updated. ]
+
+>>> [No ACK from client2, message sent to server]
+>>> [Server not responding]
+>>> [Exiting]
+
+
+y (client2) display:
+>>> [Welcome, you are registered.]
+>>> [Client table updated. ]
+>>> [You are Offline. Bye.]
+
+
+
+Test-case 3:
+x (Client1) display:
+>>> [Welcome, you are registered.]
+>>> [Client table updated. ]
+>>> [Client table updated. ]
+>>> [Client table updated. ]
+send_all Hello, everyone! This is client1, known as X.
+>>> Message received by Server.
+
+
+y (client2) display:
+>>> [Welcome, you are registered.]
+>>> [Client table updated. ]
+>>> [Client table updated. ]
+>>> Channel_Message client1: Hello, everyone! This is client1, known as X.
+
+
+z (client3) display:
+>>> [Welcome, you are registered.]
+>>> [Client table updated. ]
+>>> Channel_Message client1: Hello, everyone! This is client1, known as X.
